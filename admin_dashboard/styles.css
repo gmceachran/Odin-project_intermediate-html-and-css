@@ -1,15 +1,62 @@
 body {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-columns: minmax(230px, 1fr) 4fr;
+  grid-template-rows: minmax(90px, 1fr) 5fr;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   min-height: 100vh;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .sidebar {
-  background-color: skyblue;
+  display: grid;
+  grid-template-rows: 3rem 3fr 5fr;
+  background-color: rgb(61, 164, 242);
   grid-row: 1 / 3;
+  color: white;
+  padding: 15px;
+  gap: 15px;
+}
+
+.dashboard-header-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar img {
+  filter: invert(1);
+}
+
+.dashboard-logo {
+  max-height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-links {
+  min-height: 100%;
+}
+
+li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 10px;
+  gap: 15px;
+}
+
+.sidebar-nav-icon {
+  height: 20px;
 }
 
 header {
@@ -17,36 +64,62 @@ header {
   background-color: white;
   z-index: 1;
   position: relative;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 2fr 3fr;
+  padding: 10px 40px 10px 20px;
 }
+
+.header-top,
+.header-bottom {
+  display: flex;
+  align-items: center;
+}
+
+
 
 main {
   background-color: #e1e1e1;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  gap: 20px;
 }
 
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr repeat(3, 5fr);
-  gap: 15px;
-  padding: 15px;
+  grid-template-rows: 2rem repeat(3, 5fr);
+  gap: 20px;
 }
 
-h2 {
+.projects h2, 
+aside h2 {
   display: flex;
   align-items: flex-end;
   grid-column: 1 / 3;
   font-size: 20px;
   font-weight: 500;
   margin: 0;
+}
 
+.project,
+.right-sidebar-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .project {
-  min-height: 100px;
-  min-width: 100px;
-  background-color: white;
-  border-radius: 8px;
   border-left: 8px solid gold;
 }
+
+aside {
+  display: grid;
+  grid-template-rows: 2rem 5fr 2rem 4fr;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+

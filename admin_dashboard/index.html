@@ -7,8 +7,46 @@
   <title>Admin Dashboard</title>
 </head>
 <body>
-  <div class="sidebar"></div>
-  <header></header>
+  <section class="sidebar" aria-labelledby="dashboard">
+    <a href="home" class="dashboard-header-link">
+      <img class="dashboard-logo" src="images/icons/view-dashboard.svg" alt="Dashboard">
+      <h2 class="dashboard-header">Dashboard</h2>
+    </a>
+    <nav class="internal-links">
+      <ul class="sidebar-links internal">
+        <li><a href="#"><img src="images/icons/home.svg" alt="" class="sidebar-nav-icon"> Home</a></li>
+        <li><a href="#"><img src="images/icons/card-account-details-outline.svg" alt="" class="sidebar-nav-icon"> Profile</a></li>
+        <li><a href="#"><img src="images/icons/message-reply.svg" alt="" class="sidebar-nav-icon"> Messages</a></li>
+        <li><a href="#"><img src="images/icons/clock-time-three.svg" alt="" class="sidebar-nav-icon"> History</a></li>
+        <li><a href="#"><img src="images/icons/file-multiple.svg" alt="" class="sidebar-nav-icon"> Tasks</a></li>
+        <li><a href="#"><img src="images/icons/account-group.svg" alt="" class="sidebar-nav-icon"> Communities</a></li>
+      </ul>
+    </nav>
+    <nav class="support-links">
+      <ul class="sidebar-links support">
+        <li><a href="#"><img src="images/icons/cog.svg" alt="" class="sidebar-nav-icon"> Settings</a></li>
+        <li><a href="#"><img src="images/icons/help-box.svg" alt="" class="sidebar-nav-icon"> Support</a></li>
+        <li><a href="#"><img src="images/icons/shield-check.svg" alt="" class="sidebar-nav-icon"> Privacy</a></li>
+      </ul>
+    </nav>
+  </section>
+  <header>
+    <div class="header-top">
+      <div class="search-bar">
+        <button class="search"></button>
+        <input type="text">
+      </div>
+      <nav class="profile-links">
+        <ul>
+          <li><button></button></li>
+          <li><a href=""></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-bottom">
+
+    </div>
+  </header>
   <main>
     <section class="projects">
       <h2>Your Projects</h2>
@@ -20,8 +58,10 @@
       <div class="project"></div>
     </section>
     <aside class="right-sidebar">
-      <div class="announcements"></div>
-      <div class="trending"></div>
+      <h2 class="announcements-header">Announcements</h2>
+      <div class="right-sidebar-card" id="announcements"></div>
+      <h2 class="trending-header">Trending</h2>
+      <div class="right-sidebar-card" id="trending"></div>
     </aside>
   </main>
 </body>
